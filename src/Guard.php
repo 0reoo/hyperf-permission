@@ -2,7 +2,10 @@
 
 namespace Donjan\Permission;
 
-use Hyperf\Utils\Collection;
+
+use Hyperf\Collection\Collection;
+use function Hyperf\Collection\collect;
+use function Hyperf\Config\config;
 
 class Guard
 {

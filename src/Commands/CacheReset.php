@@ -7,7 +7,7 @@ namespace Donjan\Permission\Commands;
 use Donjan\Permission\PermissionRegistrar;
 use Hyperf\Command\Annotation\Command;
 use Hyperf\Command\Command as HyperfCommand;
-use Hyperf\Utils\ApplicationContext;
+use Hyperf\Context\ApplicationContext;
 
 class CacheReset extends HyperfCommand
 {

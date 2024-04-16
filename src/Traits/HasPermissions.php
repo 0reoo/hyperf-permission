@@ -4,17 +4,18 @@ declare(strict_types = 1);
 
 namespace Donjan\Permission\Traits;
 
-use Hyperf\Utils\ApplicationContext;
-use Hyperf\Utils\Collection;
 use Donjan\Permission\Guard;
+use Hyperf\Collection\Collection;
+use Hyperf\Context\ApplicationContext;
 use Hyperf\Database\Model\Builder;
 use Donjan\Permission\PermissionRegistrar;
 use Donjan\Permission\Contracts\Permission;
-use Donjan\Permission\Exceptions\GuardDoesNotMatch;
 use Hyperf\Database\Model\Relations\MorphToMany;
 use Donjan\Permission\Exceptions\PermissionDoesNotExist;
 use Hyperf\Database\Model\Events\Deleting;
 use Donjan\Permission\Models\Permission as ModelPermission;
+use function Hyperf\Config\config;
+use function Hyperf\Collection\collect;
 
 trait HasPermissions
 {

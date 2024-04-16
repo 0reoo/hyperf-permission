@@ -4,13 +4,15 @@ declare(strict_types = 1);
 
 namespace Donjan\Permission\Traits;
 
-use Hyperf\Utils\ApplicationContext;
-use Hyperf\Utils\Collection;
 use Donjan\Permission\Contracts\Role;
+use Hyperf\Collection\Collection;
+use Hyperf\Context\ApplicationContext;
 use Hyperf\Database\Model\Builder;
 use Donjan\Permission\PermissionRegistrar;
 use Hyperf\Database\Model\Relations\MorphToMany;
 use Hyperf\Database\Model\Events\Deleting;
+use function Hyperf\Config\config;
+use function Hyperf\Collection\collect;
 
 trait HasRoles
 {

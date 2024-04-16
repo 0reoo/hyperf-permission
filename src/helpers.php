@@ -1,5 +1,8 @@
 <?php
 
+use function Hyperf\Config\config;
+
+
 if (!function_exists('getModelForGuard')) {
 
     /**

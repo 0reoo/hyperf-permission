@@ -4,6 +4,8 @@ declare(strict_types = 1);
 
 namespace Donjan\Permission\Exceptions;
 
+use function Hyperf\Config\config;
+
 class UnauthorizedException extends \RuntimeException
 {
     private $requiredRoles = [];

@@ -2,11 +2,13 @@
 
 namespace Donjan\Permission;
 
-use Hyperf\Utils\Collection;
 use Donjan\Permission\Contracts\Role;
 use Donjan\Permission\Contracts\Permission;
+use Hyperf\Collection\Collection;
 use Psr\Container\ContainerInterface;
 use Psr\SimpleCache\CacheInterface;
+use Psr\SimpleCache\InvalidArgumentException;
+use function Hyperf\Config\config;
 
 class PermissionRegistrar {
 
@@ -26,7 +28,7 @@ class PermissionRegistrar {
     /** @var string */
     protected $roleClass;
 
-    /** @var \Hyperf\Utils\Collection */
+
     protected $permissions;
 
     /** @var DateInterval|int */
@@ -81,7 +83,8 @@ class PermissionRegistrar {
      *
      * @param array $params
      *
-     * @return \Hyperf\Utils\Collection
+     * @return Collection
+     * @throws InvalidArgumentException
      */
     public function getPermissions(array $params = []): Collection {
         if ($this->permissions === null) {
@@ -107,7 +110,7 @@ class PermissionRegistrar {
     /**
      * Get an instance of the permission class.
      *
-     * @return \Donjan\Permission\Contracts\Permission
+     * @return Permission
      */
     public function getPermissionClass(): Permission {
         return $this->container->get($this->permissionClass);
@@ -122,7 +125,7 @@ class PermissionRegistrar {
     /**
      * Get an instance of the role class.
      *
-     * @return \Donjan\Permission\Contracts\Role
+     * @return Role
      */
     public function getRoleClass(): Role {
         return $this->container->get($this->roleClass);

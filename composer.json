@@ -1,5 +1,5 @@
 {
-    "name": "mogody/hyperf-permission",
+    "name": "0reoo/hyperf-permission",
     "description": "hyperf权限管理组件",
     "keywords": [
         "donjan",
@@ -11,27 +11,27 @@
         "rbac",
         "security"
     ],
-    "homepage": "https://github.com/mogody/hyperf-permission",
+    "homepage": "https://github.com/0reoo/hyperf-permission",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mogody",
-            "homepage": "https://github.com/mogody",
+            "name": "0reoo",
+            "homepage": "https://github.com/0reoo",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.1",
         "ext-swoole": ">=4.5",
-        "hyperf/cache": "~3.0.0",
-        "hyperf/command": "^3.0",
-        "hyperf/database": "~3.0.0",
-        "hyperf/db-connection": "~3.0.0",
-        "hyperf/utils": "~3.0.0",
-        "hyperf/validation": "~3.0.0"
+        "hyperf/cache": "~3.1.0",
+        "hyperf/command": "^3.1",
+        "hyperf/database": "~3.1.0",
+        "hyperf/db-connection": "~3.1.0",
+        "hyperf/utils": "~3.1.0",
+        "hyperf/validation": "~3.1.0"
     },
     "require-dev": {
-        "hyperf/testing": "~3.0.0"
+        "hyperf/testing": "~3.1.0"
     },
     "autoload": {
         "psr-4": {

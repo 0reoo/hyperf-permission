@@ -4,10 +4,10 @@ declare(strict_types = 1);
 
 namespace Donjan\Permission\Models;
 
-use Hyperf\Utils\ApplicationContext;
 use Donjan\Permission\Guard;
-use Hyperf\Utils\Collection;
 use Donjan\Permission\Traits\HasRoles;
+use Hyperf\Collection\Collection;
+use Hyperf\Context\ApplicationContext;
 use Hyperf\DbConnection\Model\Model;
 use Donjan\Permission\PermissionRegistrar;
 use Donjan\Permission\Traits\RefreshesPermissionCache;
@@ -16,6 +16,7 @@ use Donjan\Permission\Exceptions\PermissionDoesNotExist;
 use Hyperf\Database\Model\Relations\BelongsToMany;
 use Donjan\Permission\Exceptions\PermissionAlreadyExists;
 use Donjan\Permission\Contracts\Permission as PermissionContract;
+use function Hyperf\Config\config;
 
 class Permission extends Model implements PermissionContract
 {

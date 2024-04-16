@@ -14,6 +14,7 @@ use Donjan\Permission\Contracts\Role as RoleContract;
 use Donjan\Permission\Traits\RefreshesPermissionCache;
 use Hyperf\Database\Model\Relations\MorphToMany;
 use Hyperf\Database\Model\Relations\BelongsToMany;
+use function Hyperf\Config\config;
 
 class Role extends Model implements RoleContract
 {
